@@ -153,6 +153,7 @@ class grafana (
   String[1] $toml_package_ensure,
   Optional[String[1]] $toml_package_provider,
   Stdlib::HTTPUrl $repo_gpg_key_url = 'https://packages.grafana.com/gpg.key',
+  Boolean $repo_enabled = true,
 ) {
   contain grafana::install
   contain grafana::config

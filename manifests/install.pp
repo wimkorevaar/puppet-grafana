@@ -135,7 +135,7 @@ class grafana::install {
               baseurl  => $baseurl,
               gpgcheck => 1,
               gpgkey   => $grafana::repo_gpg_key_url,
-              enabled  => 1,
+              enabled  => $grafana::repo_enabled,
               before   => Package['grafana'],
             }
           }
